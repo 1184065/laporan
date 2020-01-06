@@ -1,0 +1,123 @@
+\chapter{Pertemuan 3}
+\section{Issues \#21}
+Pada \textit{issues \#21} (\textit{class Apem(object):}) ialah pembuatan class sehingga program dapat dijalankan secara \textit{Object-Oriented-Programming} / OOP 
+\begin{verbatim}
+class Apem(object): 
+\end{verbatim}
+\section{Issues \#22}
+Pada \textit{issues \#22} (\textit{def \_\_init\_\_(self, filname): self.filname = filname}) pembuatan constructor dengan parameter self dan filname
+\section{Issues \#23}
+Pada \textit{issues \#23} (\textit{def masuk(self):}) ialah fungsi yang berisikan method yang akan menampilkan tampilan halaman sistem akademik siap di Politeknik Pos Indonesia
+\begin{verbatim}
+def masuk(self): 
+        self.opsi = Options()
+        self.opsi.headless = False
+        self.cap = webdriver.common.desired_capabilities.DesiredCapabilities().FIREFOX
+        self.cap['marionette'] = True
+        self.driver= webdriver.Firefox()
+        self.driver.get('http://siap.poltekpos.ac.id/')
+\end{verbatim}
+\section{Issues \#24}
+Pada \textit{issues \#24} (\textit{def login(self):}) fungsi yang berisikan method yang akan menampilkan tampilan halaman login ke sistem akademik siap di Politeknik Pos Indonesia
+\begin{verbatim}
+ def login(self): 
+        self.opsi = Options()
+        self.opsi.headless = False
+        self.cap = webdriver.common.desired_capabilities.DesiredCapabilities().FIREFOX
+        self.cap['marionette'] = True
+        self.driver= webdriver.Firefox()
+        self.driver.get('http://siap.poltekpos.ac.id/siap/besan.depan.php')
+        self.driver.find_element_by_name('user_name').send_keys(self.npm)
+        self.driver.find_element_by_name('user_pass').send_keys(self.paswd)
+        self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[1]/tbody/tr/td[2]/table[2]/tbody/tr[1]/td[2]/div/form/input[4]').click()
+\end{verbatim}
+\section{Issues \#25}
+Pada \textit{issues \#25} (\textit{self.driver.find\_element\_by\_xpath('/html/body/table/tbody/tr[5]/td/table[1]/tbody/tr/td[2]/table[2]/tbody/tr[1]/td[2]/div/form/input[4]').click()}) merupakan variabel yang memungkinkan driver untuk mendapatkan element pada button login melalui xpath kemudian program akan secara otomatis melakukan method click pada button tersebut
+\section{Issues \#26}
+Pada \textit{issues \#26} (\textit{def speak(self):}) fungsi yang dibuat untuk memberikan method yang terjadi ketika user mengucapkan sesuatu ke program kemudian program menangkap audio yang diterima dengan menggunakan \textit{try and except}
+\begin{verbatim}
+def speak(self):
+        r= sr.Recognizer()
+        with sr.Microphone() as source:
+            print("SAY SOMETHING, PLEASE")
+            audio = r.listen(source)
+        try:
+            print("TEXT : "+r.recognize_google(audio, language='id-ID'))
+            x = "siap"
+            y = "login siap"
+            z = "Cek nilai semester 1"
+            a = "Cek nilai semester 2"
+            b = "Cek nilai semester 3"
+            c = "Cek nilai semester pendek"
+            d = "kalender akademik ganjil 2017"
+            e = "kalender akademik ganjil 2018"
+            f = "kalender akademik ganjil 2019"
+            g = "kalender akademik genap 2017"
+            h = "kalender akademik genap 2018"
+            i = "kalender akademik genap 2019"
+            j = "jadwal semester 3"
+            k = "jadwal semester 2"
+            l = "jadwal semester 1"
+            m = "nomor saya"
+            n = "alamat saya"
+            o = "nomor ortu"
+            p = "mail ortu"
+            if (r.recognize_google(audio, language='id-ID')) == x:
+                self.masuk()
+            if (r.recognize_google(audio, language='id-ID')) == y:
+                self.login()
+            if (r.recognize_google(audio, language='id-ID')) == z:
+                self.ceknilai1()
+            if (r.recognize_google(audio, language='id-ID')) == a:
+                self.ceknilai2()
+            if (r.recognize_google(audio, language='id-ID')) == b:
+                self.ceknilai3()
+            if (r.recognize_google(audio, language='id-ID')) == c:
+                self.ceknilaipendek()
+            if (r.recognize_google(audio, language='id-ID')) == d:
+                self.kalenderganjil2017()
+            if (r.recognize_google(audio, language='id-ID')) == e:
+                self.kalenderganjil2018()
+            if (r.recognize_google(audio, language='id-ID')) == f:
+                self.kalenderganjil2019()
+            if (r.recognize_google(audio, language='id-ID')) == g:
+                self.kalendergenap2017()
+            if (r.recognize_google(audio, language='id-ID')) == h:
+                self.kalendergenap2018()
+            if (r.recognize_google(audio, language='id-ID')) == i:
+                self.kalendergenap2019()
+            if (r.recognize_google(audio, language='id-ID')) == j:
+                self.jadwalsmt1()
+            if (r.recognize_google(audio, language='id-ID')) == k:
+                self.jadwalsmt2()
+            if (r.recognize_google(audio, language='id-ID')) == l:
+                self.jadwalsmt3()
+            if (r.recognize_google(audio, language='id-ID')) == m:
+                self.nomerhp()
+            if (r.recognize_google(audio, language='id-ID')) == n:
+                self.alamatsiswa()
+            if (r.recognize_google(audio, language='id-ID')) == o:
+                self.nomerortu()
+            if (r.recognize_google(audio, language='id-ID')) == p:
+                self.emailortu()
+\end{verbatim}
+\section{Issues \#27}
+Pada \textit{issues \#27} (\textit{print("Time is over, thanks")}) merupakan method berupa mencetak "Time is over, thanks" yang akan dijalankan ketika program telah selesai dieksekusi
+\begin{verbatim}
+print("Time is over, thanks")
+\end{verbatim}
+\section{Issues \#28}
+Pada \textit{issues \#28} (\textit{import apem}) merupakan perintah yang digunakan untuk mengimportkan file apem
+\begin{verbatim}
+import apem
+\end{verbatim}
+\section{Issues \#29}
+Pada \textit{issues \#29} (\textit{speech = apem.Apem(object)}) merupakan variabel yang berisikan perintah untuk penginisiasian objek dari file apem di \textit{class} Apem.
+\begin{verbatim}
+speech = apem.Apem(object)
+\end{verbatim}
+\section{Issues \#30}
+Pada \textit{issues \#30} (\textit{speech.speak()}) merupakan perintah yang digunakan untuk menjalankan method pada fungsi speak() yang telah dibuat pada class Apem sebelumnya.
+\begin{verbatim}
+speech.speak()
+\end{verbatim}

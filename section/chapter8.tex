@@ -1,0 +1,88 @@
+\chapter{Pertemuan 8}
+
+\section{Issues \#71}
+Pada \textit{issues \#71} (\textit{from time import sleep}) adalah sebuah fungsi untuk menambahkan jeda waktu dengan \textit{import sleep}
+\begin{lstlisting}[language=Python]
+from time import sleep
+\end{lstlisting}
+
+
+\section{Issues \#72}
+Pada \textit{issues \#72} adalah \textit{sleep(2)} menambahkan jeda waktu selama 2 detik
+
+\section{Issues \#73}
+Pada \textit{issues \#73} ini merupakan fungsi untuk mengambil elemen atau \textit{element by xpath} dari Ubah Profil
+\begin{lstlisting}[language=Python]
+  self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[1]/tbody/tr/td[1]/table[2]/tbody/tr[1]/td[2]/a[1]').click()
+\end{lstlisting}
+
+\section{Issues \#74}
+Pada \textit{issues \#74} ini merupakan fungsi untuk mengambil elemen atau \textit{find element by xpath} dari \textit{input name} dari \textit{class textbox} dan dengan \textit{name}nya \textit{Handphone} dengan menggunakan \textit{variable} nomorsaya
+\begin{lstlisting}[language=Python]
+self.nomorsaya = self.driver.find_element_by_xpath("//input[@name='Handphone']")
+\end{lstlisting}
+
+\section{Issues \#75}
+Pada \textit{issues \#75} ini merupakan fungsi untuk mengambil elemen atau \textit{get attribute value} dengan \textit{variable} nomorsayas
+\begin{lstlisting}[language=Python]
+self.nomorsayas = self.nomorsaya.get_attribute('value')
+\end{lstlisting}
+
+
+\section{Issues \#76}
+Pada \textit{issues \#76} ini merupakan fungsi untuk mengambil elemen atau \textit{find element by link text} Orang Tua
+\begin{lstlisting}[language=Python]
+self.driver.find_element_by_link_text('Orang Tua').click()
+\end{lstlisting}
+
+
+\section{Issues \#77}
+Pada \textit{issues \#77} \textit{def nomerortu(self):} ini merupakan fungsi untuk mengecek dan mengambil \textit{value} dari nomer orang tua
+\begin{lstlisting}[language=Python]
+ def nomerortu(self):
+        self.opsi = Options()
+        self.opsi.headless = False
+        self.cap = webdriver.common.desired_capabilities.DesiredCapabilities().FIREFOX
+        self.cap['marionette'] = True
+        self.driver = webdriver.Firefox()
+        self.driver.get('http://siap.poltekpos.ac.id/siap/besan.depan.php')
+        self.driver.find_element_by_name('user_name').send_keys(self.npm)
+        self.driver.find_element_by_name('user_pass').send_keys(self.paswd)
+        self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[1]/tbody/tr/td[2]/table[2]/tbody/tr[1]/td[2]/div/form/input[4]').click()
+        self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[1]/tbody/tr/td[1]/table[2]/tbody/tr[1]/td[2]/a[1]').click()
+        sleep(2)
+        self.driver.find_element_by_link_text('Orang Tua').click()
+        sleep(2)
+        self.nomor = self.driver.find_element_by_xpath("//input[@name='HandphoneOrtu']")
+        self.nomornya = self.nomor.get_attribute('value')
+        print(self.nomornya)
+\end{lstlisting}
+
+\section{Issues \#78}
+Pada \textit{issues \#78} \textit{def emailortu(self):}ini merupakan fungsi untuk mengecek atau mengambil \textit{value} dari email orang tua
+\begin{lstlisting}[language=Python]
+ def emailortu(self):
+        self.opsi = Options()
+        self.opsi.headless = False
+        self.cap = webdriver.common.desired_capabilities.DesiredCapabilities().FIREFOX
+        self.cap['marionette'] = True
+        self.driver = webdriver.Firefox()
+        self.driver.get('http://siap.poltekpos.ac.id/siap/besan.depan.php')
+        self.driver.find_element_by_name('user_name').send_keys(self.npm)
+        self.driver.find_element_by_name('user_pass').send_keys(self.paswd)
+        self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[1]/tbody/tr/td[2]/table[2]/tbody/tr[1]/td[2]/div/form/input[4]').click()
+        self.driver.find_element_by_link_text('Ubah Profil').click()
+        self.driver.find_element_by_link_text('Orang Tua').click()
+        sleep(2)
+        self.emailortu = self.driver.find_element_by_xpath("//input[@name='EmailOrtu']")
+        sleep(2)
+        self.emailortus = self.emailortu.get_attribute('value')
+        print(self.emailortus)
+\end{lstlisting}
+
+
+\section{Issues \#79}
+Pada \textit{issues \#79} \textit{print(self.nomorsayas)} ini merupakan fungsi untuk \textit{print variable} dari nomorsayas
+
+\section{Issues \#80}
+Pada \textit{issues \#80} ini meruapakan fungsi untuk \textit{print text} sesuai yang diucapkan dan dikenali oleh \textit{speech recognition}dan sebuah fungsi untuk jika audio dari \textit{recognize google} menangkap suara seperti \textit{variable} misalnya p maka akan melakukan \textit{method emailortu}

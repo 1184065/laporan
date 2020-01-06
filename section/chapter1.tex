@@ -1,0 +1,86 @@
+\chapter{Pertemuan 1}
+
+\section{Issues \#1}
+Pada \textit{issues \#1} (\textit{Hardcoded text}) Keterangan dan pemechan masalah : ini hanya peringatan, fungsi tetap bekerja sebagai mana mestinya. direkomendasikan untuk mendefine string "text" di file string.xml. alasannya agar membuat perubahan di masa depan lebih sederhana dan lebih mudah untuk referensi di beberapa halaman.
+\\lokasi
+\begin{verbatim}
+  <Button
+  android:id="@+id/buttonScan"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_alignParentBottom="true"
+  android:text="Scan QR Code" />       
+\end{verbatim}
+sehingga solusinya didapatkan dengan cara mendownload packages python pyAudio yang sesuai dengan versi python yang digunakan. Setelah itu install melalui cmd dengan mengetikkan \begin{verbatim}
+  <resources>
+  <string name="app_name">QRCodeScanner</string>
+  </resources>
+\end{verbatim}
+Pada merupakan error yang terjadi di saat hendak melakukan instalasi PyAudio melalui pip install PyAudio\begin{verbatim}
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/string_name"/>
+\end{verbatim}
+Pada merupakan error yang terjadi di saat hendak melakukan instalasi PyAudio melalui pip install PyAudio\begin{verbatim}
+  <resources>
+    <string name="app_name">QRCodeScanner</string>
+    <string name="scan_qr_code">Scan Qr Code</string>
+  </resources>
+\end{verbatim}
+
+\section{Issues \#2}
+Pada \textit{issues \#2} (\textit{ERROR: Failed buiding wheel for PyAudio}) yaitu Error yang terjadi ketika instalasi PyAudio gagal dilakukan.
+
+\section{Issues \#3}
+Pada \textit{issues \#3} (\textit{fungsionalitas + r.recognize\_google(audio, language = 'id-ID')}) yaitu digunakan untuk mengenali suara yang ditangkap oleh audio berdasarkan bahasanya, disini berarti karena digunakan kode 'id-ID' maka audio akan lebih menangkap suara berdasarkan bahasa Indonesia
+\begin{verbatim}
++ r.recognize_google(audio, language = 'id - ID')
+\end{verbatim}
+
+\section{Issues \#4}
+Pada \textit{issues \#4} (\textit{
+error: Microsoft Visual C++ 14.0 is required. Ger it with"Microsift Visual C++ Build Tools": https://visualstudio.microsoft.com/downloads/}) merupakan error yang disebabkan karena pyAudio yang tidak dapat terinstall dengan menggunakan pip
+
+\section{Issues \#5}
+Pada \textit{issues \#5} (\textit{IndentationError: unexpected unindent}) merupakan error yang disebabkan karena adanya indentasi yang tidak sesuai. Hal itu dikarenakan pada kode program python sangat memperhatikan indentasi yang berfungsi sebagai pembatas blok kode program
+\begin{verbatim}
+IndentationError: unexpected unindent
+\end{verbatim}
+error tersebut terjadi karena kode berikut
+\begin{verbatim}
+    try:
+        print("YOU SAY :" + r.recognize_google(audio, language = 'id-ID'))
+except Exception as e:#
+        print(e)
+\end{verbatim} yang mana seharusnya kodenya menjadi
+\begin{verbatim}
+    try:
+        print("YOU SAY :" + r.recognize_google(audio, language = 'id-ID'))
+    except Exception as e:
+        print(e)
+\end{verbatim}
+
+\section{Issues \#6}
+Pada \textit{issues \#6} \textit{Fungsionalitas import speech\_recognition as sr}
+yaitu mengimportkan package speech\_recognition yang telah diinstall sebelumnya melalui pip, berikut ini merupakan kodenya
+\begin{verbatim}
+pip install SpeechRecognition
+\end{verbatim}
+\section{Issues \#7}
+Pada \textit{issues \#7} (\textit{r=sr.recognizer()}) ialah membuat variabel r yang dibuat sebagi pengenal dari modul speech\_recognition yang telah diinstall sebelumnya
+\begin{verbatim}
+r=sr.recognizer()
+\end{verbatim}
+\section{Issues \#8}
+Pada \textit{issues \#8} (\textit{with sr.Microphone() as source: print("SPEAK ANYTHING") audio = r.listen(source)}) merupakan kode yang digunakan untuk menginisiasika Microphone dari module speech\_recognition dan dialiaskan dengan source dan mencetak "SPEAK ANYTHING". Lalu dengan variabel audio digunakan untuk merecord apa yang dikenal dari source
+\begin{verbatim}
+with sr.Microphone() as source: print("SPEAK ANYTHING") audio = r.listen(source)
+\end{verbatim}
+\section{Issues \#9}
+Pada \textit{issues \#9} (\textit{print("YOU SAY :" + r.recognize\_google(audio, language = 'id-ID'))}) kode yang digunakan untuk mencetak audio yang ditangkap dan dikenali dari speech\_recognition
+\begin{verbatim}
+print("YOU SAY :" + r.recognize\_google(audio, language = 'id-ID'))
+\end{verbatim}
+\section{Issues \#10}
+Pada \textit{issues \#10} (\textit{except Exception as e: print(e) print("TIME OVER, THANK YOU")}) fungsi yang digunakan untuk memberikan \textit{Exception} apabila program gagal mendeteksi suara atau terjadi kesalahan atau \textit{error} yang kemudian akan dicetak \textit{error} tersebut dan mencetak "TIME OVER, THANK YOU"

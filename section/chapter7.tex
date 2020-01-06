@@ -1,0 +1,62 @@
+\chapter{Pertemuan 7}
+
+\section{Issues \#61}
+Pada \textit{issues \#61} ini adalah sebuah fungsi untuk mengeklik  Jadwal Kuliah dengan mengambil elemen atau \textit{find element by link text} si Jadwal Kuliah
+\begin{lstlisting}[language=Python]
+	self.driver.find_element_by_link_text('Jadwal Kuliah').click()
+\end{lstlisting}
+
+\section{Issues \#62}
+Pada \textit{issues \#62} ini adalah sebuah fungsi untuk mengambil elemen atau \textit{find element} tahun akademik semester ganjil 2019/2020
+\begin{lstlisting}[language=Python]
+	  self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr/td[3]/select/option[2]').click()
+\end{lstlisting}
+
+\section{Issues \#63}
+Pada \textit{issues \#63} ini adalah sebuah fungsi untuk mengambil elemen atau \textit{find element by class name} dari si tampilkan dengan \textit{class} nya namanya \textit{button}
+\begin{lstlisting}[language=Python]
+self.driver.find_elements_by_class_name('button').click()
+\end{lstlisting}
+
+
+\section{Issues \#64}
+Pada \textit{issues \#64} ini adalah sebuah fungsi untuk mengambil elemen atau \textit{find element by xpath} dari tahun akademik semester genap 2018/2019
+\begin{lstlisting}[language=Python]
+self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr/td[3]/select/option[3]').click()
+\end{lstlisting}
+
+\section{Issues \#65}
+Pada \textit{issues \#65} ini adalah sebuah fungsi untuk mengambil elemen atau \textit{find element by xpath} dari tahun akademik semester ganjil 2018-2019
+\begin{lstlisting}[language=Python]
+self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr/td[3]/select/option[4]').click()
+\end{lstlisting}
+
+\section{Issues \#66}
+Pada \textit{issues \#66} ini adalah sebuah fungsi untuk jika audio menangkap suara seperti \textit{variable} misalnya j maka akan melakukan \textit{method self.jadwalsmt1()}
+\begin{lstlisting}[language=Python]
+if (r.recognize_google(audio, language='id-ID')) == j:
+    self.jadwalsmt1()
+\end{lstlisting}
+
+\section{Issues \#67}
+Pada \textit{issues \#67} ini adalah sebuah fungsi untuk jika audio dari \textit{recognize google} menangkap suara seperti \textit{variable} misalnya k maka akan melakukan \textit{method jadwalsmt2}
+\begin{lstlisting}[language=Python]
+if (r.recognize_google(audio, language='id-ID')) == k:
+    self.jadwalsmt2()
+\end{lstlisting}
+
+\section{Issues \#68}
+Pada \textit{issues \#68} ini adalah sebuah fungsi untuk jika audio dari \textit{recognize google} menangkap suara seperti \textit{variable} misalnya l maka akan melakukan method jadwalsmt3()
+\begin{lstlisting}[language=Python]
+if (r.recognize_google(audio, language='id-ID')) == l:
+    self.jadwalsmt3()
+\end{lstlisting}
+
+
+\section{Issues \#69}
+Pada \textit{issues \#69} \textit{[WinError 10054] An existing connection was forcibly closed by the remote host} sebuah \textit{error} yang disebabkan oleh Memberitahu Anda bahwa sudah ada koneksi aktif di tempat kesalahan di mana Anda mungkin mencoba untuk membuka yang kedua. \\
+cara mengatasinya yaitu putuskan sambungan wifi, \textit{restart} laptop, koneksikan wifi yang akan digunakan secara manual saja
+
+\section{Issues \#70}
+Pada \textit{issues \#70} (\textit{'list' object has no attribute 'click'
+error}) disebabkan dikarenakan tidak dapat mengambil atau \textit{find element by link text} pada Jadwal Kuliah, karena salah penulisan pada Jadwal kuliah.

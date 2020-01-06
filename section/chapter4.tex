@@ -1,0 +1,56 @@
+\chapter{Pertemuan 4}
+
+\section{Issues \#31}
+Pada \textit{issues \#31} (\textit{def \_\_init\_\_(self, npm, paswd):}) merupakan constructor yang berisikan parameter berupa npm dan paswd sehingga kedua variabel tersebut adalah variabel yang dieksekusi pertama kali saat program dijalankan
+\begin{verbatim}
+def __init__(self, npm, paswd):
+        self.npm = npm
+        self.paswd = paswd
+\end{verbatim}
+
+\section{Issues \#32}
+Pada \textit{issues \#32} (\textit{self.npm = npm self.paswd = paswd}) merupakan pendeklarasian variabel yang ada pada constructor
+\begin{verbatim}
+self.npm = npm
+self.paswd = paswd
+\end{verbatim}
+
+\section{Issues \#33}
+Pada \textit{issues \#33} (\textit{self.driver.find\_element\_by\_name('user\_name').send\_keys(self.npm)}) fungsi ini digunakan untuk memungkinkan driver untuk mengambil elemen menggunakan nama user\_name dan mengirimkan inputan yang didapatkan dari variabel npm
+
+\section{Issues \#34}
+Pada \textit{issues \#34} (\textit{self.driver.find\_element\_by\_name('user\_pass').send\_keys(self.paswd)})
+fungsi ini digunakan untuk memungkinkan driver untuk mengambil elemen menggunakan nama user\_pass dan mengirimkan inputan yang didapatkan dari variabel paswd
+
+\section{Issues \#35}
+Pada \textit{issues \#35} (\textit{self.driver.find\_element\_by\_name('login').click()}) fungsi ini digunakan untuk memungkinkan driver untuk mengambil elemen menggunakan nama "login" dan melakukan method berupa click elemen tersebut
+
+\section{Issues \#36}
+Pada \textit{issues \#36} (\textit{Fungsionalitas npm=input("Masukkan NPM")}) merupakan pendeklarasian variabel npm yang dilakukan dengan melakukan inputan user
+
+\section{Issues \#37}
+Pada \textit{issues \#37} (\textit{Fungsionalitas paswd=input("Masukkan password akun SIAP anda")}) 
+merupakan pendeklarasian variabel paswd yang dilakukan dengan melakukan inputan user
+\section{Issues \#38}
+Pada \textit{issues \#38} (\textit{Fungsionalitas TypeError: \_init\_() missing 1 required positional argument: 'paswd'}) merupakan \textit{error} yang disebabkan oleh adanya memasukkan parameter yang tidak sesuai dengan \textit{constructor}
+\begin{verbatim}
+speech = apem.Apem(object,npm)#issue 38
+\end{verbatim}
+pada kode tersebut, penginisiasian objectnya tidak sesuai karena parameternya salah, seharusnya parameter yang digunakan ialah (npm, paswd), sehingga sebagai berikut :
+\begin{verbatim}
+speech = apem.Apem(npm, paswd) #penyelesaian issue 38
+\end{verbatim}
+\section{Issues \#39}
+Pada \textit{issues \#39} (\textit{Too many positional arguments for method call}) merupakan error yang disebabkan karena penempatan argument yang sebernarnya tidak diperlukan
+\begin{verbatim}
+speech.speak(object)#issue 39 
+\end{verbatim}
+kemudian berikut ini merupakan penyelesaian yang digunakan :
+\begin{verbatim}
+speech.speak()#penyelesaian issue 39
+\end{verbatim}
+\section{Issues \#40}
+Pada \textit{issues \#40} (\textit{Message: Reached error page: about:neterror?e=connectionFailure&u=https\%3A\\siap.poltekpos.ac.id/&c=UTF-8&f=regular&d=Firefox\%20can\%E2\%80\%99t\%20establish\%20a\%20connection\%20to\%20the\%20server\%20at\%20siap.poltekpos.ac.id.}) error tersebut disebabkan karena adanya program dari driver yang tidak sesuai, sehingga harus dihilangkan. Berikut ini merupakan kode yang dihilangkan 
+\begin{verbatim}
+self.opsi = webdriver.firefox.options.Options()
+\end{verbatim}

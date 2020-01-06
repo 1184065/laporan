@@ -1,0 +1,83 @@
+\chapter{Pertemuan 6}
+
+\section{Issues \#51}
+Pada \textit{issues \#51} \textit{def kalenderganjil2019(self):}) sebuah fungsi untuk mengecek kalender ganjil 2019
+\begin{lstlisting}[language=Python]
+ def kalenderganjil2019(self):
+        self.opsi = Options()
+        self.opsi.headless = False
+        self.cap = webdriver.common.desired_capabilities.DesiredCapabilities().FIREFOX
+        self.cap['marionette'] = True
+        self.driver = webdriver.Firefox()
+        self.driver.get('http://siap.poltekpos.ac.id/siap/besan.depan.php')
+        self.driver.find_element_by_name('user_name').send_keys(self.npm)
+        self.driver.find_element_by_name('user_pass').send_keys(self.paswd)
+        self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[1]/tbody/tr/td[2]/table[2]/tbody/tr[1]/td[2]/div/form/input[4]').click()
+        self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[1]/tbody/tr/td[1]/table[2]/tbody/tr[1]/td[2]/a[6]').click()
+        self.driver.find_element_by_class_name('textbox').click()
+        self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[2]/td[2]/select/option[1]').click()
+        self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[4]/td[2]/select/option[2]').click()
+        self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[5]/td/input').click()
+
+\end{lstlisting}
+
+\section{Issues \#52}
+Pada \textit{issues \#52} ini merupakan fungsi untuk mengambil elemen atau \textit{find element} dari Kalender Akademik.
+\begin{lstlisting}[language=Python]
+self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[1]/tbody/tr/td[1]/table[2]/tbody/tr[1]/td[2]/a[6]').click()
+\end{lstlisting}
+
+\section{Issues \#53}
+Pada \textit{issues \#53} ini merupakan sebuah fungsi untuk mengambil elemen atau \textit{find element} dari \textit{class name textbox} yaitu elemen dari Tahun Akademik.
+\begin{verbatim}
+self.driver.find_element_by_class_name('textbox').click()
+\end{verbatim}
+
+\section{Issues \#54}
+Pada \textit{issues \#54} ini merupakan sebuah fungsi mengambil elemen atau \textit{find element} \textit{by xpath}
+\begin{lstlisting}[language=Python]
+self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[2]/td[2]/select/option[1]').click()
+\end{lstlisting}
+
+\section{Issues \#55}
+Pada \textit{issues \#55} ini merupakan sebuah fungsi untuk mengambil elemen atau \textit{find element by xpath} dari program studi 14- d4 Teknik Informatika
+\begin{lstlisting}[language=Python]
+self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p[1]/table/tbody/tr[4]/td[2]/select/option[2]').click()
+\end{lstlisting}
+
+
+
+\section{Issues \#56}
+Pada \textit{issues \#56} fungsi ini digunakan untuk mengambil elemen atau \textit{find element by xpath} dari tombol tampilkan
+\begin{lstlisting}[language=Python]
+  self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[5]/td/input').click()
+\end{lstlisting}
+
+
+\section{Issues \#57}
+Pada \textit{issues \#57}  fungsi ini dignakan untuk mengambil elemen atau \textit{find element by xpath} dari tahun akademik semester ganjil 2019/2020
+\begin{lstlisting}[language=Python]
+ self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[2]/td[2]/select/option[2]').click()
+\end{lstlisting}
+
+\section{Issues \#58}
+Pada \textit{issues \#58} fungsi ini digunakan untuk mengambil elemen atau \textit{find element by xpath} dari tahun akademik semester antara 2018/2019
+\begin{lstlisting}[language=Python]
+self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[2]/td[2]/select/option[3]').click()
+\end{lstlisting}
+
+\section{Issues \#59}
+Pada \textit{issues \#59}  fungsi ini digunakan untk mengambil elemen atau \textit{find element by xpath} dari tahun akademik semster genap 2018/2019
+\begin{lstlisting}[language=Python]
+self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[2]/td[2]/select/option[4]').click()
+\end{lstlisting}
+
+\section{Issues \#60}
+Pada \textit{issues \#60}  fungsi ini digunakan untuk mengambil elemen atau \textit{find element by xpath} dari tahun akademik semester ganjil 2018/2019
+\begin{lstlisting}[language=Python]
+self.driver.find_element_by_xpath('/html/body/table/tbody/tr[5]/td/table[3]/tbody/tr[1]/td[2]/p/table/tbody/tr[2]/td[2]/select/option[5]').click()
+\end{lstlisting}
+
+
+
+
