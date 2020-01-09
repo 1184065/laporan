@@ -30,57 +30,114 @@ Pada merupakan error yang terjadi di saat hendak melakukan instalasi PyAudio mel
 \end{verbatim}
 
 \section{Issues \#2}
-Pada \textit{issues \#2} (\textit{ERROR: Failed buiding wheel for PyAudio}) yaitu Error yang terjadi ketika instalasi PyAudio gagal dilakukan.
+Pada \textit{issues \#2} (\textit{MissingPrefix}) yaitu Error yang terjadi ketika xxxx.
+\\lokasi :
+\begin{verbatim}
+  <Button
+  android:id="@+id/buttonScan"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_alignParentBottom="true"
+  android:text="Scan QR Code" />       
+\end{verbatim}
+Perbaikan kode progam :\begin{verbatim}
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/string_name"/>
+\end{verbatim}
 
 \section{Issues \#3}
-Pada \textit{issues \#3} (\textit{fungsionalitas + r.recognize\_google(audio, language = 'id-ID')}) yaitu digunakan untuk mengenali suara yang ditangkap oleh audio berdasarkan bahasanya, disini berarti karena digunakan kode 'id-ID' maka audio akan lebih menangkap suara berdasarkan bahasa Indonesia
+Pada \textit{issues \#2} (\textit{Jenis Error : identifier expected}) yaitu Error yang terjadi ketika xxxx.
+\\lokasi :
 \begin{verbatim}
-+ r.recognize_google(audio, language = 'id - ID')
+  protected void onPostExecute(s) {
+     super.onPostExecute(s);
+     loading.dismiss();
+     Toast.makeText(MainActivity.this,s,Toast.LENGTH_LONG).show();
+  }
+\end{verbatim}
+Perbaikan kode progam :\begin{verbatim}
+  protected void onPostExecute(String s) {
+     super.onPostExecute(s);
+     loading.dismiss();
+     Toast.makeText(MainActivity.this,s,Toast.LENGTH_LONG).show();
+  }
 \end{verbatim}
 
 \section{Issues \#4}
-Pada \textit{issues \#4} (\textit{
-error: Microsoft Visual C++ 14.0 is required. Ger it with"Microsift Visual C++ Build Tools": https://visualstudio.microsoft.com/downloads/}) merupakan error yang disebabkan karena pyAudio yang tidak dapat terinstall dengan menggunakan pip
+Pada \textit{issues \#2} (\textit{Jenis Error : variable ‘x’ is already defined in scope})
+\\lokasi :
+\begin{verbatim}
+  RequestHandler rh = new RequestHandler();
+  String rh = rh.sendPostRequest(konfigurasi.URL_ADD, params);
+  return rh;
+\end{verbatim}
+Keterangan dan splusi :
+\\tidak dapat memanggil variabel sendidiri dan membuat variabel lokal dengan nama yang sama di java. solusi yang dapat dilakukan adalah mengganti nama salah variable
+Perbaikan kode progam :\begin{verbatim}
+  protected void onPostExecute(String s) {
+     super.onPostExecute(s);
+     loading.dismiss();
+     Toast.makeText(MainActivity.this,s,Toast.LENGTH_LONG).show();
+  }
+\end{verbatim}
 
 \section{Issues \#5}
-Pada \textit{issues \#5} (\textit{IndentationError: unexpected unindent}) merupakan error yang disebabkan karena adanya indentasi yang tidak sesuai. Hal itu dikarenakan pada kode program python sangat memperhatikan indentasi yang berfungsi sebagai pembatas blok kode program
+Pada \textit{issues \#2} (\textit{Jenis Error : Incompatible Types})
+\\lokasi :
 \begin{verbatim}
-IndentationError: unexpected unindent
+  buttonScan = (“Button”) findViewById(R.id.buttonScan);
+  buttonAdd = (“Button”) findViewById(R.id.buttonAdd);
+  buttonTabel = (“Button”) findViewById(R.id.buttonTabel);
 \end{verbatim}
-error tersebut terjadi karena kode berikut
-\begin{verbatim}
-    try:
-        print("YOU SAY :" + r.recognize_google(audio, language = 'id-ID'))
-except Exception as e:#
-        print(e)
-\end{verbatim} yang mana seharusnya kodenya menjadi
-\begin{verbatim}
-    try:
-        print("YOU SAY :" + r.recognize_google(audio, language = 'id-ID'))
-    except Exception as e:
-        print(e)
+Keterangan dan pemecahan masalah :
+\\ini merupakan sebuah error pada MainActivity.java karena penggunaan dalam syntak salah yaitu dengan menggunakan tanda kutip pada kode Button. adalah mengganti nama salah variable
+Perbaikan kode progam :\begin{verbatim}
+  buttonScan = (Button) findViewById(R.id.buttonScan);
+  buttonAdd = (Button) findViewById(R.id.buttonAdd);
+  buttonTabel = (Button) findViewById(R.id.buttonTabel);
 \end{verbatim}
 
 \section{Issues \#6}
-Pada \textit{issues \#6} \textit{Fungsionalitas import speech\_recognition as sr}
-yaitu mengimportkan package speech\_recognition yang telah diinstall sebelumnya melalui pip, berikut ini merupakan kodenya
-\begin{verbatim}
-pip install SpeechRecognition
+Pada \textit{issues \#2} (\textit{warning Field can be converted to a local variable Lokasi File MainActivity.java})
+\\lokasi :
+Keterangan dan pemecahan masalah :
+\\ini merupakan sebuah warning atau peringatan pada MainActivity.java karena
+pada IntentIntegrator kelebihan dalam bidang kelasnya dan jika kelebihan bisa diganti dengan variable lokal.
 \end{verbatim}
+
 \section{Issues \#7}
-Pada \textit{issues \#7} (\textit{r=sr.recognizer()}) ialah membuat variabel r yang dibuat sebagi pengenal dari modul speech\_recognition yang telah diinstall sebelumnya
+Pada \textit{issues \#2} (\textit{Local variable 'res' is redundant less Lokasi File MainActivity.java})
+\\lokasi :
 \begin{verbatim}
-r=sr.recognizer()
+String res = rh.sendPostRequest(konfigurasi.URL_ADD, params);
 \end{verbatim}
+\\ini merupakan sebuah warning atau peringatan pada MainActivity.java, warning tersebut meliputi; variabel yang ditangkap meliputi variabel lokal yang segera dikembalikan, variabel lokal yang segera ditugaskan ke variabel lain dan kemudian tidak digunakan, dan variabel lokal yang selalu memiliki nilai yang sama dengan variabel atau parameter lokal lainnya.
+
+
 \section{Issues \#8}
-Pada \textit{issues \#8} (\textit{with sr.Microphone() as source: print("SPEAK ANYTHING") audio = r.listen(source)}) merupakan kode yang digunakan untuk menginisiasika Microphone dari module speech\_recognition dan dialiaskan dengan source dan mencetak "SPEAK ANYTHING". Lalu dengan variabel audio digunakan untuk merecord apa yang dikenal dari source
+Pada \textit{issues \#2} (\textit{Cannot resolve symbol ‘parent’})
+\\lokasi :
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+if (result != null)
+\\Keterangan dan Solusi:
+Library belum diimport solusinya dengan cara mengimport library jenis zxying:
 \begin{verbatim}
-with sr.Microphone() as source: print("SPEAK ANYTHING") audio = r.listen(source)
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 \end{verbatim}
+
 \section{Issues \#9}
-Pada \textit{issues \#9} (\textit{print("YOU SAY :" + r.recognize\_google(audio, language = 'id-ID'))}) kode yang digunakan untuk mencetak audio yang ditangkap dan dikenali dari speech\_recognition
-\begin{verbatim}
-print("YOU SAY :" + r.recognize\_google(audio, language = 'id-ID'))
+Pada \textit{issues \#2} (\textit{taticFieldLeak})
+\\lokasi : Lokasi File MainActivity.java
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+if (result != null)
 \end{verbatim}
+\\Keterangan dan pemecahan masalah:
+AsyncTask sebagai class non static inner yang akan menerima reference dari parent class. untuk memperbaikinya teruskan aktivity yang lemah ke constructor AsyncTask. kemudian kamu dapat memanggil intent code di onPostExecute.
+
 \section{Issues \#10}
-Pada \textit{issues \#10} (\textit{except Exception as e: print(e) print("TIME OVER, THANK YOU")}) fungsi yang digunakan untuk memberikan \textit{Exception} apabila program gagal mendeteksi suara atau terjadi kesalahan atau \textit{error} yang kemudian akan dicetak \textit{error} tersebut dan mencetak "TIME OVER, THANK YOU"
+Pada \textit{issues \#10} (\textit{XXXXXXXXXXX)}) fungsi yang digunakan untuk memberikan \textit{Exception} apabila program gagal mendeteksi suara atau terjadi kesalahan atau \textit{error} yang kemudian akan dicetak \textit{error} tersebut dan mencetak "TIME OVER, THANK YOU"
